@@ -12,7 +12,7 @@ class Api_Index extends PhalApi_Api {
     public function getRules() {
         return array(
             'query' => array(
-                //'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'default' => '1', 'require' => false, 'desc' => '分页'),
+                'page' => array('name' => 'page', 'type' => 'int', 'min' => 1, 'default' => '1', 'require' => false, 'desc' => '分页'),
               
             ),
         );
@@ -41,8 +41,13 @@ class Api_Index extends PhalApi_Api {
      * @return string date  时间日期
      */
     public function query(){
-       // $page=$this->page;
-        $url = "http://caibaojian.com/c/news";
+        $page=$this->page;
+        $url = "http://caibaojian.com/c/news/page/{$page}";
+
+        if($page==1){
+            $url = "http://caibaojian.com/c/news";
+        }
+
         $res=DI()->base->HttpGet($url);
         \phpQuery::newDocumentHTML($res);
 
