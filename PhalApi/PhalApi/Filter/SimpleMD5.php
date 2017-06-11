@@ -25,6 +25,10 @@ class PhalApi_Filter_SimpleMD5 implements PhalApi_Filter {
         $this->signName = $signName;
     }
 
+    /**
+     * 签名验证 去除了sign和方法名参数
+     * @throws PhalApi_Exception_BadRequest
+     */
     public function check() {
 
         $service = DI()->request->get('service');

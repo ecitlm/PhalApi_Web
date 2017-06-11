@@ -34,6 +34,7 @@ class Api_Index extends PhalApi_Api {
 
     /**
      *
+     * @url http://192.168.1.2:8097/Public/?service=Index.query
      * @return string title 商品id
      * @return int daily_id   详情id
      * @return string des  描述
