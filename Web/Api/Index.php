@@ -5,6 +5,15 @@
 
 class Api_Index extends PhalApi_Api {
 
+
+    private $domain;
+
+
+    function __construct()
+    {
+        $this->domain = new Domain_Index();
+    }
+
     /**
      * 定义路由规则
      * @return array
@@ -33,7 +42,7 @@ class Api_Index extends PhalApi_Api {
 
 
     /**
-     *
+     * 前端日报
      * @url http://192.168.1.2:8097/Public/?service=Index.query
      * @return string title 商品id
      * @return int daily_id   详情id
@@ -41,36 +50,8 @@ class Api_Index extends PhalApi_Api {
      * @return string date  时间日期
      */
     public function query(){
-        $page=$this->page;
-        $url = "http://caibaojian.com/c/news/page/{$page}";
 
-        if($page==1){
-            $url = "http://caibaojian.com/c/news";
-        }
-
-        $res=DI()->base->HttpGet($url);
-        \phpQuery::newDocumentHTML($res);
-
-        $arr = array();
-        $list = pq('#content article');
-        foreach ($list as $li) {
-            $title = pq($li)->find('.entry-title span')->text();
-            $desc = pq($li)->find('.entry-content p')->text();
-            $url = pq($li)->find('.read-more')->attr('href');
-            $date = pq($li)->find('.entry-date')->text();
-            $id = intval(preg_replace('/\D/s', '', $url));
-
-            $tmp = array(
-                'title' => $title,
-                'date' => $date,
-                'desc' => $desc,
-                'daily_id' => $id
-            );
-            array_push($arr, $tmp);
-        }
-
-        return $arr;
-
+        return $this->domain->query($this->page);
     }
 
 }
