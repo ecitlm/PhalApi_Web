@@ -2,7 +2,7 @@
 /**
  * PhpUnderControl_DomainUser_Test
  *
- * 针对 ./Demo/Domain/User.php Domain_User 类的PHPUnit单元测试
+ * 针对 ./Demo/Domain/Index.php Domain_User 类的PHPUnit单元测试
  *
  * @author: dogstar 20150208
  */
@@ -10,7 +10,7 @@
 require_once dirname(__FILE__) . '/../test_env.php';
 
 if (!class_exists('Domain_User')) {
-    require dirname(__FILE__) . '/./Demo/Domain/User.php';
+    require dirname(__FILE__) . '/./Demo/Domain/Index.php';
 }
 
 class PhpUnderControl_DomainUser_Test extends PHPUnit_Framework_TestCase
