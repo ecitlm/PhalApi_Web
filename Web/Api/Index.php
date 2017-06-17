@@ -7,8 +7,6 @@ class Api_Index extends PhalApi_Api {
 
 
     private $domain;
-
-
     function __construct()
     {
         $this->domain = new Domain_Index();
@@ -53,10 +51,8 @@ class Api_Index extends PhalApi_Api {
      * @return string date  时间日期
      */
     public function query(){
-
-       // echo(PhalApi_Tool::getClientIp());
-
-        return $this->domain->query($this->page);
+        $res=$this->domain->query($this->page);
+        return $res;
     }
 
 }
