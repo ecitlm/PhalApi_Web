@@ -38,4 +38,6 @@ return array(
     'apiTokenRules' => array(
         'Cart.GetCart'
     ),
+
+    'music_api' => "http://m.kugou.com/",
 );
