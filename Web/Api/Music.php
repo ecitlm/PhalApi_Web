@@ -77,8 +77,8 @@ class Api_Music extends PhalApi_Api
     /**
      * 歌单下的音乐列表
      * @method GET请求
-     * @desc 歌单下的某个歌单下的音乐列表
-     * @url http://192.168.1.2:8096/?service=music.plist_list&specialid=126317
+     * @desc   歌单下的某个歌单下的音乐列表
+     * @url    http://192.168.1.2:8096/?service=music.plist_list&specialid=126317
      */
     public function plist_list()
     {
@@ -93,11 +93,11 @@ class Api_Music extends PhalApi_Api
     /**
      * 歌手分类
      * @method GET请求
-     * @desc 获取歌手分类
-     * @url http://192.168.1.2:8096/?service=music.singer_class
-     * @return int classid id
+     * @desc   获取歌手分类
+     * @url    http://192.168.1.2:8096/?service=music.singer_class
+     * @return int     classid    id
      * @return string  classname   名称
-     * @return string imgurl  分类头像
+     * @return string  imgurl  分类头像
      */
     public function singer_class()
     {
