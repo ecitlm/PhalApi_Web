@@ -13,8 +13,4 @@ Demo/Api/DogstarTest.php
 *.tar
 .idea
 *.swp
-
-.DS_Store
-*.DS_Store
-
 .idea
