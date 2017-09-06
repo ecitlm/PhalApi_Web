@@ -19,7 +19,7 @@ class Common_Functions
             curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept:application', 'X-Request:JSON', 'X-Requested-With:XMLHttpRequest'));
         }
 
-        //如果用的协议是https则打开鞋面这个注释
+        //如果用的协议是https则打开这个注释、不验证https
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 
