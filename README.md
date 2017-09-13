@@ -6,7 +6,7 @@ PhalApi是一个PHP轻量级开源接口框架，致力于快速开发接口服�
 * 接口签名校验、
 * PhpQuery爬虫集成
 
-```
+```php
 class PhalApi_Filter_SimpleMD5 implements PhalApi_Filter {
 
     protected $signName;
