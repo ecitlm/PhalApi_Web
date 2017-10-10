@@ -13,6 +13,12 @@ class Api_Web extends PhalApi_Api
         DI()->functions = "Common_Functions";
     }
 
+/**
+     * web新闻
+     * @method GET请求
+     * @desc 获取音web新闻
+     * @url http://192.168.1.2:8096/?service=web.frame
+     */
     public function frame()
     {
 

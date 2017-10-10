@@ -30,7 +30,7 @@ class Api_Index extends PhalApi_Api {
      * 获取163数据
      * @method POST请求
      * @desc 获取163数据
-     * @url http://192.168.1.2:8097/Public/?service=Index.index
+     * @url http://192.168.1.2:8096/?service=Index.index
      */
     public function index(){
 
@@ -43,7 +43,7 @@ class Api_Index extends PhalApi_Api {
 
     /**
      * 前端日报
-     * @url http://192.168.1.2:8097/Public/?service=Index.query
+     * @url http://192.168.1.2:8096/?service=Index.query
      * @desc 获取前端开发日报
      * @return string title 商品id
      * @return int daily_id   详情id

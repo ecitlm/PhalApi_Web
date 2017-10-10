@@ -30,13 +30,15 @@ return array(
      */
     'apiFilterRules' => array(
         'Default.Index',
+        'Index.index',
     ),
 
     /**
      * 需要带Token的接口
      */
     'apiTokenRules' => array(
-        'Cart.GetCart'
+        'Cart.GetCart',
+        'Index.index'
     ),
 
     'music_api' => "http://m.kugou.com/",
